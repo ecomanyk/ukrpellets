@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. СЛОВАРЬ ПЕРЕВОДОВ (UA, EN, DE, PL)
+    // 1. СЛОВНИК ПЕРЕКЛАДІВ (UA, EN, DE, PL)
     const translations = {
         uk: {
             home: "Головна",
@@ -96,18 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 2. ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ЯЗЫКОВ
+    // 2. ЛОГІКА ПЕРЕМИКАННЯ МОВ
     const langBtns = document.querySelectorAll('.lang-btn');
     
     function switchLanguage(lang) {
         if (!translations[lang]) return;
 
-        // Переключаем активную кнопку
+        // Перемикаємо активну кнопку
         langBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        // Обновляем все элементы с data-i18n
+        // Оновлюємо всі елементи с data-i18n
         document.querySelectorAll('[data-i18n]').forEach(elem => {
             const key = elem.dataset.i18n;
             if (translations[lang][key]) {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Сохраняем выбор в локальное хранилище
+        // Зберігаємо вибір у локальне сховище
         localStorage.setItem('selectedLang', lang);
     }
 
@@ -123,12 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
     });
 
-    // Загрузка сохраненного языка или UA по умолчанию
+    // Завантаження збереженої мови або UA за замовчуванням
     const savedLang = localStorage.getItem('selectedLang') || 'uk';
     switchLanguage(savedLang);
 
 
-    // 3. ЛОГИКА КАЛЬКУЛЯТОРА
+    // 3. ЛОГІКА КАЛЬКУЛЯТОРА
     const calcBtn = document.getElementById('calc-btn');
     const areaInput = document.getElementById('area');
     const insulationSelect = document.getElementById('insulation');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Формула расчёта мощности: (Площадь / 10) * коэффициент утепления
+            // Формула розрахунку потужності: (Площадь / 10) * коефіцієнт утеплення
             const calculatedPower = Math.ceil((area / 10) * insulation);
 
             resultPower.textContent = calculatedPower;
