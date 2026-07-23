@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKRPELLETS — Пелетні котли та обладнання</title>
+
+    <!-- Підключення файлу стилів style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту / Навігація -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">UKR<span>PELLETS</span></a>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about" data-lang-uk="Про нас" data-lang-en="About Us">Про нас</a></li>
+                    <li><a href="#calculator" data-lang-uk="Калькулятор" data-lang-en="Calculator">Калькулятор</a></li>
+                    <li><a href="#products" data-lang-uk="Продукція" data-lang-en="Products">Продукція</a></li>
+                    <li><a href="#clients" data-lang-uk="Клієнти" data-lang-en="Clients">Клієнти</a></li>
+                    <li><a href="#contact" data-lang-uk="Контакти" data-lang-en="Contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <!-- Перемикач мови -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uk">UA</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний банер (Секція Hero) -->
+    <section class="hero">
+        <div class="container hero-content">
+            
+            <!-- ЗОБРАЖЕННЯ 1: Головне зображення банера -->
+            <div class="hero-image">
+                <img src="hero-bg.jpg" alt="Пелетний котел UKRPELLETS">
+            </div>
+
+            <h1 data-lang-uk="Ефективне та екологічне опалення для вашого дому" data-lang-en="Efficient and Eco-Friendly Heating for Your Home">
+                Ефективне та екологічне опалення для вашого дому
+            </h1>
+            <p data-lang-uk="Пелетні котли високої якості з автоматичною подачею палива та високим ККД." data-lang-en="High-quality pellet boilers with automatic fuel feeding and high efficiency.">
+                Пелетні котли високої якості з автоматичною подачею палива та високим ККД.
+            </p>
+            <a href="#calculator" class="btn btn-primary" data-lang-uk="Розрахувати потужність" data-lang-en="Calculate Power">
+                Розрахувати потужність
+            </a>
+        </div>
+    </section>
+
+    <!-- Блок Калькулятора -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 data-lang-uk="Калькулятор потужності котла" data-lang-en="Boiler Power Calculator">Калькулятор потужності котла</h2>
+            <p data-lang-uk="Розрахуйте необхідну потужність для опалення вашого приміщення" data-lang-en="Calculate the required power for heating your premises">
+                Розрахуйте необхідну потужність для опалення вашого приміщення
+            </p>
+
+            <div class="calc-box">
+                <div class="form-group">
+                    <label for="area" data-lang-uk="Площа приміщення (м²):" data-lang-en="Room Area (m²):">Площа приміщення (м²):</label>
+                    <input type="number" id="area" placeholder="Наприклад: 150" min="10" max="1000">
+                </div>
+
+                <div class="form-group">
+                    <label for="insulation" data-lang-uk="Рівень утеплення:" data-lang-en="Insulation Level:">Рівень утеплення:</label>
+                    <select id="insulation">
+                        <option value="1.2" data-lang-uk="Слабке утеплення" data-lang-en="Poor insulation">Слабке утеплення</option>
+                        <option value="1.0" selected data-lang-uk="Стандартне утеплення" data-lang-en="Standard insulation">Стандартне утеплення</option>
+                        <option value="0.8" data-lang-uk="Хороше утеплення (енергоефективне)" data-lang-en="Good insulation (energy efficient)">Хороше утеплення (енергоефективне)</option>
+                    </select>
+                </div>
+
+                <button id="calc-btn" class="btn btn-secondary" data-lang-uk="Розрахувати" data-lang-en="Calculate">Розрахувати</button>
+
+                <div id="calc-result" class="result-box" style="display: none;">
+                    <span data-lang-uk="Рекомендована потужність котла:" data-lang-en="Recommended Boiler Power:">Рекомендована потужність котла:</span>
+                    <strong id="result-power">0</strong> кВт
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція Продукція -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 data-lang-uk="Наша продукція" data-lang-en="Our Products">Наша продукція</h2>
+            <div class="product-grid">
+                
+                <!-- Товар 1 -->
+                <div class="product-card">
+                    <!-- ЗОБРАЖЕННЯ 2 -->
+                    <img src="product-1.jpg" alt="UKRPELLETS Mini" class="product-img">
+                    
+                    <h3>UKRPELLETS Mini</h3>
+                    <p data-lang-uk="Компактний котел для приватних будинків до 150 м²." data-lang-en="Compact boiler for private houses up to 150 m².">
+                        Компактний котел для приватних будинків до 150 м².
+                    </p>
+                    <span class="price">15 кВт</span>
+                    <button class="btn btn-outline order-btn" data-lang-uk="Замовити" data-lang-en="Order">Замовити</button>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="product-card">
+                    <!-- ЗОБРАЖЕННЯ 3 -->
+                    <img src="product-2.jpg" alt="UKRPELLETS Standard" class="product-img">
+                    
+                    <h3>UKRPELLETS Standard</h3>
+                    <p data-lang-uk="Оптимальне рішення для будинків та офісів до 300 м²." data-lang-en="Optimal solution for houses and offices up to 300 m².">
+                        Оптимальне рішення для будинків та офісів до 300 м².
+                    </p>
+                    <span class="price">30 кВт</span>
+                    <button class="btn btn-outline order-btn" data-lang-uk="Замовити" data-lang-en="Order">Замовити</button>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="product-card">
+                    <!-- ЗОБРАЖЕННЯ 4 -->
+                    <img src="product-3.jpg" alt="UKRPELLETS Pro" class="product-img">
+                    
+                    <h3>UKRPELLETS Pro</h3>
+                    <p data-lang-uk="Потужний котел для виробничих приміщень та складів." data-lang-en="Powerful boiler for industrial premises and warehouses.">
+                        Потужний котел для виробничих приміщень та складів.
+                    </p>
+                    <span class="price">50+ кВт</span>
+                    <button class="btn btn-outline order-btn" data-lang-uk="Замовити" data-lang-en="Order">Замовити</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція Клієнти / Відгуки -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <h2 data-lang-uk="Наші клієнти та відгуки" data-lang-en="Our Clients & Reviews">Наші клієнти та відгуки</h2>
+            <p data-lang-uk="Нам довіряють власники приватних будинків та підприємств по всій Україні." data-lang-en="Trusted by homeowners and businesses across Ukraine.">
+                Нам довіряють власники приватних будинків та підприємств по всій Україні.
+            </p>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <h3>Олександр</h3>
+                    <p data-lang-uk="«Встановили котел UKRPELLETS Standard минулої осені. Вся система працює бездоганно, витрати на опалення суттєво зменшилися.»" data-lang-en="“Installed the UKRPELLETS Standard boiler last autumn. The system works flawlessly, heating costs decreased significantly.”">
+                        «Встановили котел UKRPELLETS Standard минулої осені. Вся система працює бездоганно, витрати на опалення суттєво зменшилися.»
+                    </p>
+                </div>
+                <div class="client-card">
+                    <h3>Виробничий комплекс «Захід»</h3>
+                    <p data-lang-uk="«Дякуємо за якісне обладнання UKRPELLETS Pro для нашого складського приміщення. Надійний сервіс та оперативна доставка.»" data-lang-en="“Thank you for the high-quality UKRPELLETS Pro equipment for our warehouse. Reliable service and prompt delivery.”">
+                        «Дякуємо за якісне обладнання UKRPELLETS Pro для нашого складського приміщення. Надійний сервіс та оперативна доставка.»
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція Контакти та Форма зворотного зв'язку -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-lang-uk="Контакти та швидка заявка" data-lang-en="Contacts & Quick Request">Контакти та швидка заявка</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p><strong>Телефон:</strong> +380 (44) 000-00-00</p>
+                    <p><strong>Email:</strong> info@ukrpellets.com</p>
+                    <p><strong>Адреса:</strong> м. Київ, Україна</p>
+                </div>
+                <form id="order-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <textarea name="message" placeholder="Ваше повідомлення або запитання..." rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary" data-lang-uk="Надіслати" data-lang-en="Send">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 UKRPELLETS. <span data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">Всі права захищені.</span></p>
+        </div>
+    </footer>
+
+    <!-- Підключення файлу скриптів script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

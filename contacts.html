@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти — UKRPELLETS</title>
+
+    <!-- Підключення файлу стилів style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту / Навігація -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">UKR<span>PELLETS</span></a>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-lang-uk="Головна" data-lang-en="Home">Головна</a></li>
+                    <li><a href="index.html#calculator" data-lang-uk="Калькулятор" data-lang-en="Calculator">Калькулятор</a></li>
+                    <li><a href="index.html#products" data-lang-uk="Продукція" data-lang-en="Products">Продукція</a></li>
+                    <li><a href="clients.html" data-lang-uk="Клієнти" data-lang-en="Clients">Клієнти</a></li>
+                    <li><a href="contacts.html" class="active" data-lang-uk="Контакти" data-lang-en="Contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <!-- Перемикач мови -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uk">UA</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секція Контактів -->
+    <main class="contacts-page">
+        <section class="contact-section">
+            <div class="container">
+                <h1 data-lang-uk="Зв'яжіться з нами" data-lang-en="Contact Us">Зв'яжіться з нами</h1>
+                <p data-lang-uk="Залиште заявку або зателефонуйте нам для отримання професійної консультації щодо підбору котла." data-lang-en="Leave a request or call us for professional consultation on choosing a boiler.">
+                    Залиште заявку або зателефонуйте нам для отримання професійної консультації щодо підбору котла.
+                </p>
+
+                <div class="contact-wrapper">
+                    
+                    <!-- Інформаційні блоки контактів -->
+                    <div class="contact-info">
+                        <h3><strong data-lang-uk="Наші контакти:" data-lang-en="Our Contacts:">Наші контакти:</strong></h3>
+                        <p><strong>Телефон:</strong> +380 (44) 000-00-00</p>
+                        <p><strong>Email:</strong> info@ukrpellets.com</p>
+                        <p><strong>Адреса:</strong> м. Київ, Україна</p>
+                        <p><strong>Графік роботи:</strong> Пн-Пт: 09:00 — 18:00</p>
+                    </div>
+
+                    <!-- Форма зворотного зв'язку -->
+                    <form id="order-form" class="contact-form">
+                        <input type="text" name="name" placeholder="Ваше ім'я" required>
+                        <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                        <textarea name="message" placeholder="Ваше повідомлення або запитання..." rows="4"></textarea>
+                        <button type="submit" class="btn btn-primary" data-lang-uk="Надіслати" data-lang-en="Send">Надіслати</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 UKRPELLETS. <span data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">Всі права захищені.</span></p>
+        </div>
+    </footer>
+
+    <!-- Підключення файлу скриптів script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
