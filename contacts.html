@@ -36,25 +36,25 @@
     <main>
         <section class="contact-section">
             <div class="container">
-                <h1 style="text-align: center; margin-bottom: 10px;" data-i18n="contacts">Зв'яжіться з нами</h1>
-                <p style="text-align: center; color: var(--text-muted);">
+                <h1 style="text-align: center; margin-bottom: 10px;" data-i18n="contactTitle">Зв'яжіться з нами</h1>
+                <p style="text-align: center; color: var(--text-muted);" data-i18n="contactSub">
                     Залиште заявку або зателефонуйте нам для отримання консультації.
                 </p>
 
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <h3 style="margin-bottom: 15px;"><strong>Наші контакти:</strong></h3>
-                        <p style="margin-bottom: 10px;"><strong>Телефон:</strong> +380 (44) 000-00-00</p>
-                        <p style="margin-bottom: 10px;"><strong>Email:</strong> info@ukrpellets.com</p>
-                        <p style="margin-bottom: 10px;"><strong>Адреса:</strong> м. Київ, Україна</p>
-                        <p style="margin-bottom: 10px;"><strong>Графік роботи:</strong> Пн-Пт: 09:00 — 18:00</p>
+                        <h3 style="margin-bottom: 15px;"><strong data-i18n="contactInfoTitle">Наші контакти:</strong></h3>
+                        <p style="margin-bottom: 10px;"><strong data-i18n="contactPhone">Телефон:</strong> +380 (44) 000-00-00</p>
+                        <p style="margin-bottom: 10px;"><strong data-i18n="contactEmail">Email:</strong> info@ukrpellets.com</p>
+                        <p style="margin-bottom: 10px;"><strong data-i18n="contactAddr">Адреса:</strong> <span data-i18n="contactCity">м. Київ, Україна</span></p>
+                        <p style="margin-bottom: 10px;"><strong data-i18n="contactHours">Графік роботи:</strong> <span data-i18n="contactDays">Пн-Пт: 09:00 — 18:00</span></p>
                     </div>
 
                     <form id="order-form" class="contact-form">
-                        <input type="text" name="name" placeholder="Ваше ім'я" required>
-                        <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                        <textarea name="message" placeholder="Ваше повідомлення..." rows="4"></textarea>
-                        <button type="submit" class="btn btn-primary">Надіслати</button>
+                        <input type="text" name="name" placeholder="Ваше ім'я" data-i18n-ph="phName" required>
+                        <input type="tel" name="phone" placeholder="Ваш телефон" data-i18n-ph="phPhone" required>
+                        <textarea name="message" placeholder="Ваше повідомлення..." data-i18n-ph="phMsg" rows="4"></textarea>
+                        <button type="submit" class="btn btn-primary" data-i18n="btnSend">Надіслати</button>
                     </form>
                 </div>
             </div>
