@@ -17,17 +17,19 @@
             
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="active" data-lang-uk="Головна" data-lang-en="Home">Головна</a></li>
-                    <li><a href="#calculator" data-lang-uk="Калькулятор" data-lang-en="Calculator">Калькулятор</a></li>
-                    <li><a href="#products" data-lang-uk="Продукція" data-lang-en="Products">Продукція</a></li>
-                    <li><a href="clients.html" data-lang-uk="Клієнти" data-lang-en="Clients">Клієнти</a></li>
-                    <li><a href="contacts.html" data-lang-uk="Контакти" data-lang-en="Contacts">Контакти</a></li>
+                    <li><a href="index.html" class="active" data-i18n="home">Головна</a></li>
+                    <li><a href="#calculator" data-i18n="calc">Калькулятор</a></li>
+                    <li><a href="#products" data-i18n="prod">Продукція</a></li>
+                    <li><a href="clients.html" data-i18n="clients">Клієнти</a></li>
+                    <li><a href="contacts.html" data-i18n="contacts">Контакти</a></li>
                 </ul>
             </nav>
 
             <div class="lang-switcher">
                 <button class="lang-btn active" data-lang="uk">UA</button>
                 <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="pl">PL</button>
             </div>
         </div>
     </header>
@@ -39,45 +41,39 @@
                 <img src="hero-bg.jpg" alt="Пелетний котел UKRPELLETS">
             </div>
 
-            <h1 data-lang-uk="Ефективне та екологічне опалення для вашого дому" data-lang-en="Efficient and Eco-Friendly Heating for Your Home">
-                Ефективне та екологічне опалення для вашого дому
-            </h1>
-            <p data-lang-uk="Пелетні котли високої якості з автоматичною подачею палива та високим ККД." data-lang-en="High-quality pellet boilers with automatic fuel feeding and high efficiency.">
-                Пелетні котли високої якості з автоматичною подачею палива та високим ККД.
-            </p>
-            <a href="#calculator" class="btn btn-primary" data-lang-uk="Розрахувати потужність" data-lang-en="Calculate Power">
-                Розрахувати потужність
-            </a>
+            <h1 data-i18n="heroTitle">Ефективне та екологічне опалення для вашого дому</h1>
+            <p data-i18n="heroSub">Пелетні котли високої якості з автоматичною подачею палива та високим ККД.</p>
+            <a href="#calculator" class="btn btn-primary" data-i18n="btnCalc">Розрахувати потужність</a>
         </div>
     </section>
 
     <!-- Калькулятор -->
     <section id="calculator" class="calculator-section">
         <div class="container">
-            <h2 data-lang-uk="Калькулятор потужності котла" data-lang-en="Boiler Power Calculator">Калькулятор потужності котла</h2>
-            <p style="text-align: center;" data-lang-uk="Розрахуйте необхідну потужність для опалення вашого приміщення" data-lang-en="Calculate the required power for heating your premises">
+            <h2 data-i18n="calcTitle">Калькулятор потужності котла</h2>
+            <p style="text-align: center;" data-i18n="calcSub">
                 Розрахуйте необхідну потужність для опалення вашого приміщення
             </p>
 
             <div class="calc-box">
                 <div class="form-group">
-                    <label for="area" data-lang-uk="Площа приміщення (м²):" data-lang-en="Room Area (m²):">Площа приміщення (м²):</label>
-                    <input type="number" id="area" placeholder="Наприклад: 150" min="10" max="1000">
+                    <label for="area" data-i18n="labelArea">Площа приміщення (м²):</label>
+                    <input type="number" id="area" placeholder="150" min="10" max="1000">
                 </div>
 
                 <div class="form-group">
-                    <label for="insulation" data-lang-uk="Рівень утеплення:" data-lang-en="Insulation Level:">Рівень утеплення:</label>
+                    <label for="insulation" data-i18n="labelIns">Рівень утеплення:</label>
                     <select id="insulation">
-                        <option value="1.2" data-lang-uk="Слабке утеплення" data-lang-en="Poor insulation">Слабке утеплення</option>
-                        <option value="1.0" selected data-lang-uk="Стандартне утеплення" data-lang-en="Standard insulation">Стандартне утеплення</option>
-                        <option value="0.8" data-lang-uk="Хороше утеплення (енергоефективне)" data-lang-en="Good insulation (energy efficient)">Хороше утеплення (енергоефективне)</option>
+                        <option value="1.2" data-i18n="insPoor">Слабке утеплення</option>
+                        <option value="1.0" selected data-i18n="insStd">Стандартне утеплення</option>
+                        <option value="0.8" data-i18n="insGood">Хороше утеплення (енергоефективне)</option>
                     </select>
                 </div>
 
-                <button id="calc-btn" class="btn btn-secondary" style="width:100%;" data-lang-uk="Розрахувати" data-lang-en="Calculate">Розрахувати</button>
+                <button id="calc-btn" class="btn btn-primary" style="width:100%;" data-i18n="btnDoCalc">Розрахувати</button>
 
                 <div id="calc-result" class="result-box" style="display: none;">
-                    <span data-lang-uk="Рекомендована потужність котла:" data-lang-en="Recommended Boiler Power:">Рекомендована потужність котла:</span>
+                    <span data-i18n="resLabel">Рекомендована потужність котла:</span>
                     <strong id="result-power">0</strong> кВт
                 </div>
             </div>
@@ -87,37 +83,31 @@
     <!-- Продукція -->
     <section id="products" class="products-section">
         <div class="container">
-            <h2 data-lang-uk="Наша продукція" data-lang-en="Our Products">Наша продукція</h2>
+            <h2 data-i18n="prodTitle">Наша продукція</h2>
             <div class="product-grid">
                 
                 <div class="product-card">
                     <img src="product-1.jpg" alt="UKRPELLETS Mini" class="product-img">
                     <h3>UKRPELLETS Mini</h3>
-                    <p data-lang-uk="Компактний котел для приватних будинків до 150 м²." data-lang-en="Compact boiler for private houses up to 150 m².">
-                        Компактний котел для приватних будинків до 150 м².
-                    </p>
+                    <p>Компактний котел для приватних будинків до 150 м².</p>
                     <span class="price">15 кВт</span>
-                    <a href="contacts.html" class="btn btn-outline" data-lang-uk="Замовити" data-lang-en="Order">Замовити</a>
+                    <a href="contacts.html" class="btn btn-outline" data-i18n="orderBtn">Замовити</a>
                 </div>
 
                 <div class="product-card">
                     <img src="product-2.jpg" alt="UKRPELLETS Standard" class="product-img">
                     <h3>UKRPELLETS Standard</h3>
-                    <p data-lang-uk="Оптимальне рішення для будинків та офісів до 300 м²." data-lang-en="Optimal solution for houses and offices up to 300 m².">
-                        Оптимальне рішення для будинків та офісів до 300 м².
-                    </p>
+                    <p>Оптимальне рішення для будинків та офісів до 300 м².</p>
                     <span class="price">30 кВт</span>
-                    <a href="contacts.html" class="btn btn-outline" data-lang-uk="Замовити" data-lang-en="Order">Замовити</a>
+                    <a href="contacts.html" class="btn btn-outline" data-i18n="orderBtn">Замовити</a>
                 </div>
 
                 <div class="product-card">
                     <img src="product-3.jpg" alt="UKRPELLETS Pro" class="product-img">
                     <h3>UKRPELLETS Pro</h3>
-                    <p data-lang-uk="Потужний котел для виробничих приміщень та складів." data-lang-en="Powerful boiler for industrial premises and warehouses.">
-                        Потужний котел для виробничих приміщень та складів.
-                    </p>
+                    <p>Потужний котел для виробничих приміщень та складів.</p>
                     <span class="price">50+ кВт</span>
-                    <a href="contacts.html" class="btn btn-outline" data-lang-uk="Замовити" data-lang-en="Order">Замовити</a>
+                    <a href="contacts.html" class="btn btn-outline" data-i18n="orderBtn">Замовити</a>
                 </div>
 
             </div>
@@ -126,7 +116,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 UKRPELLETS. <span data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">Всі права захищені.</span></p>
+            <p>&copy; 2026 UKRPELLETS. <span data-i18n="rights">Всі права захищені.</span></p>
         </div>
     </footer>
 
